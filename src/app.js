@@ -20,7 +20,6 @@ app.use(express.static(path.join(__dirname, "/../", "public")))
 setTimeout(async () => {
   await require("./connection/db").connectDB()
   await require("./connection/redisConnection").connectRedis()
-  // app.use("/api/", require("./app.routes"))
 }, 0)
 
 app.use(require("./app.routes"))

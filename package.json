@@ -33,7 +33,6 @@
     "passport-google-plus-token": "^2.1.0",
     "passport-jwt": "^4.0.1",
     "promise": "^8.3.0",
-    "react-i18next": "^12.2.0",
     "redis": "^4.3.1",
     "slugify": "^1.6.5",
     "util": "^0.12.5"
