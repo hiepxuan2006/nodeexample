@@ -1,14 +1,12 @@
 const express = require("express")
-const path = require("path")
-const bodyParser = require("body-parser")
-const passport = require("passport")
-const session = require("express-session")
-var cors = require("cors")
+const app = express()
 const port = 3000
-app.use(cors())
-// body-parser
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+
+setTimeout(async () => {
+  await require("./connection/db").connectDB()
+  await require("./connection/redisConnection").connectRedis()
+  // app.use("/api/", require("./app.routes"))
+}, 0)
 
 app.use(require("./app.routes"))
 app.get("/", (req, res) => {
