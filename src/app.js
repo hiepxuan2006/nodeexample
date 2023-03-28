@@ -17,10 +17,10 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(express.static(path.join(__dirname, "/../", "public")))
-setTimeout(async () => {
-  await require("./connection/db").connectDB()
-  await require("./connection/redisConnection").connectRedis()
-}, 0)
+// setTimeout(async () => {
+//   await require("./connection/db").connectDB()
+//   await require("./connection/redisConnection").connectRedis()
+// }, 0)
 
 app.use(require("./app.routes"))
 app.get("/", (req, res) => {
