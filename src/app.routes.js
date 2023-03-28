@@ -6,5 +6,5 @@ router.get("/ping", (req, res) => {
 })
 
 const sliderCtrl = require("./controller/sliderController")
-router.get("/slider/get-sliders", sliderCtrl.getSlider)
+// router.get("/slider/get-sliders", sliderCtrl.getSlider)
 module.exports = router
