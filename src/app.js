@@ -2,12 +2,6 @@ const express = require("express")
 const app = express()
 const port = 3000
 
-setTimeout(async () => {
-  await require("./connection/db").connectDB()
-  await require("./connection/redisConnection").connectRedis()
-  // app.use("/api/", require("./app.routes"))
-}, 0)
-
 app.use(require("./app.routes"))
 app.get("/", (req, res) => {
   res.send("Hello World!")
